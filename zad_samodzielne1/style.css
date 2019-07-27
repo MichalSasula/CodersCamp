@@ -1,0 +1,113 @@
+body
+{
+    background-color: yellowgreen;
+    margin: auto;
+}
+
+
+
+.container
+{
+    width: 1200px;
+    /* height: 1600px; */
+    background-color: burlywood;  
+    margin: auto; 
+    margin-top: 50px; 
+}
+
+.mybox
+{
+    height: 200px;
+    float: left;
+}
+
+.red
+{
+    background-color: red;
+}
+
+.blue
+{
+    background-color: blue;
+}
+
+.violet
+{
+    background-color: violet;
+}
+
+.yellow
+{
+    background-color: yellow;
+}
+
+.width1200
+{
+    width: 1200px;
+}
+
+.width600
+{
+    width: 600px;
+}
+
+.width400
+{
+    width: 400px;
+}
+
+.width800
+{
+    width: 800px;
+}
+
+
+.eraser
+{
+    clear: both;
+}
+
+
+.gray
+{
+    background-color: gray;
+}
+
+.floatbox
+{
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

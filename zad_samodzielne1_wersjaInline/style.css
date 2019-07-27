@@ -1,0 +1,131 @@
+body
+{
+    background-color: yellowgreen;
+    margin: auto;
+}
+
+
+
+.container
+{
+    width: 1200px;
+    /* height: 1600px; */
+    background-color: burlywood;  
+    margin: auto; 
+    margin-top: 50px;
+    font-size: 0;
+    
+}
+
+.mybox
+{
+    height: 200px;
+    display: inline;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.red
+{
+    background-color: red;
+}
+
+.blue
+{
+    background-color: blue;
+}
+
+.violet
+{
+    background-color: violet;
+}
+
+.yellow
+{
+    background-color: yellow;
+}
+
+.width1200
+{
+    width: 1200px;
+}
+
+.width600
+{
+    width: 600px;
+}
+
+.width400
+{
+    width: 400px;
+}
+
+.width800
+{
+    width: 800px;
+}
+
+
+.eraser
+{
+    clear: both;
+}
+
+
+.gray
+{
+    background-color: gray;
+}
+
+.inlinebox
+{
+    display: inline-block;
+    height: 400px;
+    width: 800px;
+    font-size: 0;
+}
+
+.inlinebox2
+{
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+    font-size: 0;
+    background-color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

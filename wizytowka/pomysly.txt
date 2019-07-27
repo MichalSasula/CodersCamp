@@ -1,0 +1,2 @@
+﻿zrobić prosty slider
+wykorzystać before i after

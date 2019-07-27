@@ -1,0 +1,80 @@
+﻿git checkout (przesuwa wskaźnik HEAD na wybrany commit, w katalogu roboczym zostają wczytane pliki z wersji wybranego commitu)
+git revert (odwraca zmiany tylko w danym commicie i zapisuje je jako nowy commit). za jego pomocą można przywracać zmiany w repozytorium publicznym. nie usuwa zmian z pozostałych commitów
+git log --oneline
+git log
+git checkout master - wracam do bierzącej wersji projektu
+git reset - wyłącznie na kommitach nieopublikowanych git push, przywraca repozytorium do pewnego momentu
+	(lepiej nie używać na repozytorium publicznym?):
+	--mixed (zmiany usunięte zostaną wproadzone w katalogu projektu)
+	--soft	(zmiany usunięte zostaną dodane na stage i będą mogły być dodane do commitu)
+	--hard	(zmiany są utracone)
+
+git log --help
+git log --oneline
+git log --author="Michal Sasula" --oneline -3 (trzy ostatnie commity w formie oneline)
+git log --grep="view" (przeszukuje commity po komentarzach)
+git log --nazwa_pliku --oneline
+git log --oneline --patch (pokazuje informacje co zostało zmienione)
+git log --online --summary
+git log --oneline --stat (wyświetla statystyki)
+git log --format (formatuję w jaki sposób wyświetla mi wyniki)
+git shortlog (wyświetla commity z podziałem na użytkowników)
+
+7 zasad pisania komentarzy:
+*tytuł/treść (w nowej linijce)
+*ograniczenie tytułu do 50 znaków
+* rozpoczynanie tytułu wielką literą
+* nie dodawać kropki na koniec tytułu
+* Używaj trybu rozkazującego w tytule
+* Ograniczyć długość wiersza komentarza do 72 znaków
+* komentarz odpowiada na pytania co i dlaczego
+
+
+git stash
+git stash pop (te polecenia pozwalają przerzucić nieskomitowane i nie dodane do stagin area zmiany na inny branch)
+git stash list (można podejrzeć listę zmian na stosie)
+git stash push -m (można z komentarzem zrobić stasha i później podejrzeć za pomocą git stash list)
+git stash push -u (można zrobić stasha nawet dla tylko utworzonych plików)
+git stash apply nazwa_stashu cofa zmiany ze stasha i przywraca do katalogu roboczego ale jednocześnie zostają na stosie
+git stash pop przywraca zmiany do katalogu roboczego i czyści stash (ostatnią zmianę na stashu)
+git stash pop nazwa_stashu (przywraca wybraną zmianę ze stasha do katalogu roboczego)
+git stash drop nazwa_stashu (usuwa zmiany zmagazynowane w stashu)
+git stash clear (czyści cały stash)
+git stash branch nazwa_nowego_brancha (tworzenie nowego brancha za pomocą zmian na stosie)
+
+
+git checkout nazwa_brancha (przełączam się na brancha)
+git branch nazwa_brancha (tworzenie nowego brancha)
+
+git merge nazwa_przyłączanego_brancha (przyłączanie brancha do tego, w którym aktualnie jesteśmy)
+git log --graph --decorate --all --oneline (fajna historia zmian wraz z drzewkiem)
+git branch -D nazwa_usuwanej_galezi (usuwanie niepotrzebnej gałęzi)
+
+
+git push 
+git fetch
+git push -u origin master (wskazuje zdalne repozytorium (origin) oraz branch na który wysyłamy zmiany (master)
+	informacja ta zostaje połączona z branchem, na którym się znajdujemy
+git push --set-upstream origin master (to samo co linijka wyżej)
+git fetch  (pobranie zmian ze zdalnego repozytorium)
+
+git clone adres_repozytorium na githubie
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

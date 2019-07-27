@@ -1,0 +1,90 @@
+﻿ECMAScript - organizacja określa standard dla języka java script
+
+console.log(tresc)
+
+7 typów danych:
+-number
+-string
+-boolean
+-null
+-undefined
+-symbol ?? (typy prymitywne)
+------------------
+-object (typy referencyjne)
+-*Array
+-*Regexp
+
+
+Wpisać w stronę inernetową about:blank otwiera pustą stronę później kliknąć f12
+var nazwa_zmiennej = wartość; (- definiowanie zmiennej)
+zmienna:
+1. nazwa (identyfikator)
+2. Miejsce w pamięci
+3. Wartość
+
+Można zadeklarować i zainicjalizować zmienną na poczatku, a można tylko ją zadeklarować (wtedy będzie undefined).
+
+let i const trzeba używać do tworzenia zmiennych.
+
+
+<body onload="nazwa_funkcji()";></body> -wywołanie funkcji przy załadowaniu strony
+<script type="text/javascript" src="nazwa_skryptu.js"></script>
+
+zmienna var ma zakres funkcyjny
+let ma zasięg blokowy
+
+var umożliwia hoisting zmiennej (mechanizm polegający na automatycznym przenoszeniu wszystkich deklaracji na sam początek danego zasięgu)
+
+let nie umozliwia hoistingu zmiennej (nie można się odwołać do zmiennej przed jej deklaracją)
+var może być znowu deklarowana np:
+var btc = 400;
+var btc = 500;
+zmienna let nie może być.
+
+const ma zasięg blokowy, jest stala i nie mozna redeklarowac zmiennej
+nie mozna tylko deklarowac zmiennej np. const nazwa_zmiennej; (bo pozniej nie mozemy tego zmienic)
+
+TypeScript - nakladka na java script tak aby dzialala jak jezyk silnie typowany
+
+Number(str) (konwertuje string zlozony tylko z liczb na number)
+parseInt(str, sytem_liczbowy) (konwertuje na int w danym systemie liczbowym najczesciej podaje sie 10)
+parseFloat(str) konwertuje na float
+? co to jest zmienna typu symbol?
+
+standard zapisu liczb zmiennoprzecinkowych IEEE 754
+wstawianie pod zmienną elementu ze strony.
+<script>
+var zmienna = document.querySelector('.btn')
+?? btn.classList.add()
+?? btn.setAttribute()
+</script>
+
+Można deklarowac kilka zmiennych na raz: 
+var a; b;
+
+temporal dead zone (miejsce przed deklaracją zmiennej)
+
+=== (equal value and the same data type)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

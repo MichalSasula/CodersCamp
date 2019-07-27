@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+            <form action="new.php" method="post">
+                <label for="pytanie">Treść etykiety: </label>
+                <input id="pytanie" type="text" placeholder="Wpisz jakiś tekst">
+                <label>Treść etykiety nr 2 
+                    <input type="text" placeholder="Tekst nuemr 2">
+                </label>
+                <label for="myPassword">Etykieta dla hasła</label>
+                <input type="password" id="myPassword">
+                <br>
+                <label>Etykieta dla pola numerycznego 
+                    <input type="number" placeholder="pole numeryczne">
+                </label>
+                <label><input type="radio" name="nazwa1" val="wartosc1">Radio1</label>
+                <label><input type="radio" name="nazwa1" val="wartosc2">Radio2</label>
+            <br>
+                <label><input type="radio" name="nazwa1" val="wartosc1">Radio1</label>
+                <label><input type="radio" name="nazwa1" val="wartoscw">Radio2</label>
+            <br>
+                <label>Checkbox<input type="checkbox" checked="off"> </label>
+                <label for="listaJedn">Opis Tabelki</label>
+            <br>
+                <select id="listaJedn">
+                    <option value="val1">Pierwsza opcja</option>
+                    <option value="val2">Druga opcja</option>
+                </select>
+            <br>
+                <label for="Druga lista Wiel">Druga lista:</label>
+                <select id="listaWiel">
+                    <optgroup label="Pierwsza grupa wyboru">
+                        <option value="val1">opt1</option>
+                        <option value="val2">opt2</option>
+                    </optgroup >
+                    <optgroup label="Druga grupa wyboru">
+                        <option value="val3">opt3</option>
+                        <option value="val4" selected>opt4</option>
+                    </optgroup>
+                </select>
+            <br>
+                <label for="wielLin">Wiele wierszy</label>
+                <textarea id="wielLin" rows="5" cols="20">
+                    Coś wpisane
+                </textarea>
+            <br>
+                <button type="button" value="Treść przycisku">Coś napisane</button>
+
+
+            </form>
+    </div>
+</body>
+</html>
+
+

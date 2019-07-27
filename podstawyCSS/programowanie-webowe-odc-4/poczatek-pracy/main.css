@@ -1,0 +1,117 @@
+body
+{
+	background-color: gray;
+	background-image: url("img/dark.jpg");
+	background-repeat: repeat;
+	background-position: right top;
+	font-family: Arial;
+}
+
+#container
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	width: 900px;
+	text-align: center;
+	background-color: white;
+	
+}
+
+.kurs
+{
+	display: inline-block;
+	width: 400px;
+	margin: 0 20px;
+	/* padding: 20px; */
+	border: 1px solid brown;
+	opacity: 0.3;
+	
+}
+
+h1
+{
+	font-size: 22px;
+	font-weight: 700;
+	font-style: italic;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.kurs p
+{
+	font-size: 12px;
+	text-align: justify;
+	line-height: 140%;
+	padding: 20px;
+}
+
+h2
+{
+	font-size: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+}
+
+
+ul.lista
+{
+	text-align: left;
+	/* list-style-type: circle; */
+	list-style-image: url("img/hand.jpg");
+	list-style-position: outside;
+}
+
+ul.lista li
+{
+	margin-left: 10px;
+	color: red;
+}
+
+
+
+/*link nie odwiedzony*/
+
+/*ilnk odiwedzony*/
+
+/*link najechany*/
+a:hover
+{
+	color:blue;
+}
+
+a
+{
+	color: green;
+	text-decoration: underline;
+
+}
+
+a:visited
+{
+	color: blueviolet;
+}
+
+.test
+{
+	width: 30px;
+	height: 30px;
+	background-color: yellow;
+	left: 80px;
+	top: 40px;
+	position: fixed;
+
+}
+
+.clas1.clas2.clas3
+{
+	color:red;
+}
+
+clas1 clas2.clas3
+{
+	color:red;
+}

@@ -1,0 +1,462 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:CodersCamp - edycja wakacyjna
+X-WR-TIMEZONE:Europe/Warsaw
+X-WR-CALDESC:W tym kalendarzu znajdziesz wszystkie istotne dla Ciebie termi
+ ny\, na które  musisz zwrócić uwagę podczas trwania warsztatów CodersCamp!
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190723
+DTEND;VALUE=DATE:20190724
+DTSTAMP:20190721T130234Z
+UID:7efdamhi92cu4ito68ptap2f3n@google.com
+CREATED:20190104T105252Z
+DESCRIPTION:Tego dnia każdy z mentorów ustali termin\, w którym spotka się 
+ z teamem (online bądź offline) i rozpocznie pracę nad pierwszym projektem z
+  działu HTML i CSS. 
+LAST-MODIFIED:20190721T121912Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Pierwsze spotkanie z mentorami!
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190718
+DTEND;VALUE=DATE:20190719
+DTSTAMP:20190721T130234Z
+UID:1viv13jap3tlreipnspntbeiqh@google.com
+CREATED:20190721T122023Z
+DESCRIPTION:Test rekrutacyjny\, którego wynik decydować będzie o rezultacie
+  rekrutacji. Więcej informacji na Slacku.
+LAST-MODIFIED:20190721T122023Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Test rekrutacyjny
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190709
+DTEND;VALUE=DATE:20190710
+DTSTAMP:20190721T130234Z
+UID:1pacd41h238h05al73c3f1lq3b@google.com
+CREATED:20190107T124243Z
+DESCRIPTION:Rozpoczęcie pracy nad &nbsp\;Działem I : <b>HTML i CSS </b>- tw
+ orzenie prostych stron internetowych.
+LAST-MODIFIED:20190721T122727Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Dział I : HTML i CSS - tworzenie prostych stron internetowych.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P1DT14H0M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190717
+DTEND;VALUE=DATE:20190718
+DTSTAMP:20190721T130234Z
+UID:6atea9n5tirn93pagnf6sc1m9b@google.com
+CREATED:20190721T122755Z
+DESCRIPTION:Mija termin pracy nad &nbsp\;Działem I : <b>HTML i CSS </b>- tw
+ orzenie prostych stron internetowych.
+LAST-MODIFIED:20190721T122755Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Dział I : HTML i CSS - tworzenie prostych stron internetowych.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P1DT14H0M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190807
+DTEND;VALUE=DATE:20190808
+DTSTAMP:20190721T130234Z
+UID:392hlq0emft51h9mh2hfpte7u8@google.com
+CREATED:20190107T125552Z
+DESCRIPTION:Mija termin na realizację materiału dotyczącego <b>Dział II: Wp
+ rowadzenie do programowania w języku JavaScript.</b>
+LAST-MODIFIED:20190721T123044Z
+LOCATION:
+SEQUENCE:4
+STATUS:CONFIRMED
+SUMMARY:Dział II: Wprowadzenie do programowania w języku JavaScript.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT14H0M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190809
+DTEND;VALUE=DATE:20190810
+DTSTAMP:20190721T130234Z
+UID:0m2fjllshkvi24fe6ncm8a5pnu@google.com
+CREATED:20190107T130754Z
+DESCRIPTION:Rozpoczynasz właśnie pracę nad trzecim działem: <b>JavaScript n
+ a frontendzie - interaktywne strony i aplikacje.&nbsp\;</b>
+LAST-MODIFIED:20190721T123106Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Dział III: JavaScript na frontendzie - interaktywne strony i aplika
+ cje. 
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190821
+DTEND;VALUE=DATE:20190822
+DTSTAMP:20190721T130234Z
+UID:1i0of9534boptbmt2fotrugodp@google.com
+CREATED:20190107T130919Z
+DESCRIPTION:Mija właśnie termin na realizację materiału z <b>Dział III: Jav
+ aScript na frontendzie - interaktywne strony i aplikacje.</b>
+LAST-MODIFIED:20190721T123123Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Dział III: JavaScript na frontendzie - interaktywne strony i aplika
+ cje.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT14H0M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190823
+DTEND;VALUE=DATE:20190824
+DTSTAMP:20190721T130234Z
+UID:4qb11hkmfee4761uh0gccq2q2h@google.com
+CREATED:20190107T131851Z
+DESCRIPTION:Rozpoczynasz właśnie pracę nad czwartym działem: <b>JavaScript 
+ na backendzie - wprowadzenie do Node.js.</b>
+LAST-MODIFIED:20190721T123200Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Dział IV: JavaScript na backendzie - wprowadzenie do Node.js.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190908
+DTEND;VALUE=DATE:20190909
+DTSTAMP:20190721T130234Z
+UID:2c1fkgl883isqccdpi3agv37ae@google.com
+CREATED:20190107T132026Z
+DESCRIPTION:Mija termin na realizację materiału dotyczącego <b>Dział IV: Ja
+ vaScript na backendzie - wprowadzenie do Node.js.</b>
+LAST-MODIFIED:20190721T123315Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Dział IV: JavaScript na backendzie - wprowadzenie do Node.js.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT14H0M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190910
+DTEND;VALUE=DATE:20190911
+DTSTAMP:20190721T130234Z
+UID:43ru86qbn3h2bvetbclt8g0vob@google.com
+CREATED:20190107T132604Z
+DESCRIPTION:Rozpoczynasz właśnie pracę nad drugim działem: <b>React i Redux
+  - tworzenie aplikacji webowych.</b>
+LAST-MODIFIED:20190721T123426Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Dział V: React i Redux - tworzenie aplikacji webowych.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190922
+DTEND;VALUE=DATE:20190923
+DTSTAMP:20190721T130234Z
+UID:4qse9tje4ra0cn9jh2nfq5ki92@google.com
+CREATED:20190107T132700Z
+DESCRIPTION:Mija termin na realizację materiału dotyczącego<b> Dział V: Rea
+ ct i Redux - tworzenie aplikacji webowych.</b>
+LAST-MODIFIED:20190721T123447Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Dział V: React i Redux - tworzenie aplikacji webowych.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT14H0M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190722T153000Z
+DTEND:20190722T180000Z
+DTSTAMP:20190721T130234Z
+UID:2d8jeaj3ja4fhhd6qfb74q80kd@google.com
+CREATED:20190107T123626Z
+DESCRIPTION:Oficjalne rozpoczęcie kursu CodersCamp! \n\nNa spotkaniu poznac
+ ie szczegóły odnośnie naszej współpracy\, dowiecie się o panujących zasadac
+ h oraz warunkach zaliczenia. To będzie świetna okazja\, aby poznać zespół o
+ rganizujący kurs oraz Waszych mentorów. \n\nPo spotkaniu\, około godziny 19
+ :00 przenosimy do klubu "Bezsenność"\, gdzie będziemy mieli okazję wspólnie
+  porozmawiać już w bardziej kameralnych warunkach!
+LAST-MODIFIED:20190721T123732Z
+LOCATION:Budynek "A" (Uniwersytet Ekonomiczny)\, Kamienna 59\, 53-308 Wrocł
+ aw\, Polska
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Spotkanie organizacyjne
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20191007T153000Z
+DTEND:20191007T180000Z
+DTSTAMP:20190721T130234Z
+UID:56trosrkplu28ph83kmfm3qvkq@google.com
+CREATED:20190107T133646Z
+DESCRIPTION:Jeśli czytasz to przypomnienie to oznacza\, że udało Ci się uko
+ ńczyć CodersCamp 2019! Szczere gratulację. Oficialne zakończenie odbędzie s
+ ię w podanym adresie! Serdecznie zapraszamy!
+LAST-MODIFIED:20190721T124054Z
+LOCATION:Budynek "A" (Uniwersytet Ekonomiczny)\, Kamienna 59\, 53-308 Wrocł
+ aw\, Polska
+SEQUENCE:3
+STATUS:CONFIRMED
+SUMMARY:Oficjalne zakończenie Coders Camp 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190723
+DTEND;VALUE=DATE:20190724
+DTSTAMP:20190721T130234Z
+UID:66hsqvgdpk6io7ss7ms5e4amud@google.com
+CREATED:20190107T124938Z
+DESCRIPTION:Check list na dziś:<br><ul><li>Rozpoczęcie pracy nad pierwszym 
+ projektem: <b>nr 1.</b><br></li></ul><br>Tego dnia każdy z mentorów wyznacz
+ y termin\, w który przeprowadzi spotkanie zespołu\, przekaże niezbędną wied
+ zę z Git'a\, GitHub'a\, GitKrakena.
+LAST-MODIFIED:20190721T124432Z
+LOCATION:
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Rozpoczęcie prac nad projektem nr 1.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190821
+DTEND;VALUE=DATE:20190822
+DTSTAMP:20190721T130234Z
+UID:7tgujjds9jrk1k2cvg6m4ataq3@google.com
+CREATED:20190107T131052Z
+DESCRIPTION:Mija właśnie termin na: &nbsp\;<b>ukończenia projektu nr 2.</b>
+LAST-MODIFIED:20190721T124516Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Deadline projektu nr 2
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT14H0M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190807
+DTEND;VALUE=DATE:20190808
+DTSTAMP:20190721T130234Z
+UID:3nm421hsis0rg7g3rlf123cf8n@google.com
+CREATED:20190107T125746Z
+DESCRIPTION:Mija termin na &nbsp\;realizację projektu: <b>nr 1.</b>
+LAST-MODIFIED:20190721T124524Z
+LOCATION:
+SEQUENCE:3
+STATUS:CONFIRMED
+SUMMARY:Deadline projektu nr 1
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT14H0M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190808T153000Z
+DTEND:20190808T180000Z
+DTSTAMP:20190721T130234Z
+UID:1a5km4v3emerd1oupnmmeghol1@google.com
+CREATED:20190107T130502Z
+DESCRIPTION:Check list na dziś:<br><ul><li>test sprawdzający znajomość mate
+ riału z <b>Dział II: Wprowadzenie do programowania w języku JavaScript\,</b
+ ></li><li>rozpoczęcie pracy nad <b>projektem nr 2.&nbsp\;</b></li></ul>
+LAST-MODIFIED:20190721T124831Z
+LOCATION:Budynek "A" (Uniwersytet Ekonomiczny)\, Kamienna 59\, 53-308 Wrocł
+ aw\, Polska
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Test z Działu II - Wprowadzenie do programowania w języku JavaScrip
+ t
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT7H30M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190909T153000Z
+DTEND:20190909T180000Z
+DTSTAMP:20190721T130234Z
+UID:65qopgf3a2pdvpu7rs6a4o0l9k@google.com
+CREATED:20190107T132520Z
+DESCRIPTION:Check list na dziś:<br><ul><li>test sprawdzający znajomość mate
+ riału z <b>Dział IV: JavaScript na backendzie - wprowadzenie do Node.js</b>
+ .</li><li>rozpoczęcie prac nad trzecim projektem: <b>nr 4.</b></li></ul>
+LAST-MODIFIED:20190721T124912Z
+LOCATION:Budynek "A" (Uniwersytet Ekonomiczny)\, Kamienna 59\, 53-308 Wrocł
+ aw\, Polska
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Test z działu IV\, rozpoczęcie prac nad projektem nr 3
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT7H30M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190922
+DTEND;VALUE=DATE:20190923
+DTSTAMP:20190721T130234Z
+UID:670so3errfoub5n0ljs973lp1t@google.com
+CREATED:20190107T132811Z
+DESCRIPTION:Mija termin na realizację projektu: projektu nr 4.
+LAST-MODIFIED:20190721T124927Z
+LOCATION:
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Deadline projektu nr 4 
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT14H0M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190923T153000Z
+DTEND:20190923T180000Z
+DTSTAMP:20190721T130234Z
+UID:2bt4gb6kb2bome94ql8der3v9u@google.com
+CREATED:20190107T133359Z
+DESCRIPTION:Check list na dziś:<br><ul><li>test sprawdzający znajomość mate
+ riału z <b>Dział V: React i Redux - tworzenie aplikacji webowych.</b></li><
+ li>rozpoczęcie prac nad czwartym projektem:<b>&nbsp\;nr 5.</b></li></ul>
+LAST-MODIFIED:20190721T124936Z
+LOCATION:Budynek "A" (Uniwersytet Ekonomiczny)\, Kamienna 59\, 53-308 Wrocł
+ aw\, Polska
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Test z działu V\, rozpoczęcie prac nad projektem aplikacji kinowej.
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT7H30M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20191006
+DTEND;VALUE=DATE:20191007
+DTSTAMP:20190721T130234Z
+UID:03lg456vpbfnbkn0ik4ppu23b4@google.com
+CREATED:20190107T133613Z
+DESCRIPTION:Mija termin na realizację projektu: <b>nr 5.</b>
+LAST-MODIFIED:20190721T124950Z
+LOCATION:
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Deadline projektu nr 4
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT14H0M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190822T153000Z
+DTEND:20190822T180000Z
+DTSTAMP:20190721T130234Z
+UID:287tph7sa8vva4eg91blt4c64s@google.com
+CREATED:20190107T131406Z
+DESCRIPTION:Check list na dziś:<br><ul><li>test sprawdzający znajomość mate
+ riału z<b> Dział III: JavaScript na frontendzie - interaktywne strony i apl
+ ikacje.</b></li><li>rozpoczęcie prac nad drugim projektem: <b>nr 3.</b></li
+ ></ul>
+LAST-MODIFIED:20190721T125043Z
+LOCATION:Budynek "A" (Uniwersytet Ekonomiczny)\, Kamienna 59\, 53-308 Wrocł
+ aw\, Polska
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Test z działu III\, rozpoczęcie prac nad projektem nr 3
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT7H30M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190908
+DTEND;VALUE=DATE:20190909
+DTSTAMP:20190721T130234Z
+UID:66jrpajfvhsu52r5i0gf2cgboj@google.com
+CREATED:20190107T132142Z
+DESCRIPTION:Mija termin na realizację projektu: <b>nr 3.</b>
+LAST-MODIFIED:20190721T125124Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Deadline projektu nr 3
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT14H0M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190723
+DTEND;VALUE=DATE:20190724
+DTSTAMP:20190721T130234Z
+UID:07kkdlm3am91047hrkkk2vhjkg@google.com
+CREATED:20190107T125332Z
+DESCRIPTION:Rozpoczynasz właśnie pracę nad  drugim działem: <b>Wprowadzenie
+  do programowania w języku JavaScript.</b>
+LAST-MODIFIED:20190721T130044Z
+LOCATION:
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Dział II: Wprowadzenie do programowania w języku JavaScript.
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

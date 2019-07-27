@@ -1,0 +1,64 @@
+body
+{
+    background-color: chartreuse;
+}
+
+
+.container
+{
+    width: 90%;
+    background-color: teal;
+    margin: auto;
+    font-size: 0;
+    
+
+}
+
+.nawigacja
+{
+    width: 10%;
+    height: 200px;
+    background-color: lightcoral;
+    font-size: 12px;
+    display: inline-block;
+    margin: 0;
+}
+
+.logo
+{
+    width: 800px;
+    height: 150px;
+    
+}
+
+.content
+{
+    width: 40%;
+    height: 200px;
+    background-color: blueviolet;
+    font-size: 12px;
+    display: inline-block;
+    margin: 0;
+}
+
+.tabelaGraczy
+{
+    width: 20%;
+    height: 200px;
+    background-color: firebrick;
+    font-size: 12px;
+    display: inline-block;
+    margin: 0;
+
+}
+
+.red
+{
+    color: red;
+}
+
+.footer
+{
+    width: 800px;
+    height: 150px;
+}

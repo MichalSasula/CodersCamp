@@ -1,0 +1,79 @@
+body
+{
+	background-image: url(img/memphis-mini-dark.png);
+	margin: 0;
+}
+
+.container
+{
+	background-color: white;
+	width: 900px;
+	height: 500px;
+	margin: auto;
+	font-size: 0;
+}
+
+.logo
+{
+	background-color: gray;
+	width: 900px;
+	height: 60px;
+	margin: auto;
+	font-size: 12;
+}
+
+.menu
+{
+	background-color: black;
+	width: 900px;
+	height: 40px;
+	margin: auto;
+	font-size: 12;
+}
+
+.nav
+{
+	background-color: coral;
+	width: 250px;
+	height: 300px;
+	display: inline-block;
+	font-size: 12;
+	
+}
+
+.content
+{
+	background-color: skyblue;
+	width: 450px;
+	height: 300px;
+	display: inline-block;
+	font-size: 12;
+	
+	
+}
+
+.sidebar
+{
+	background-color: teal;
+	width: 192px;
+	height: 300px;
+	display: inline-block;
+	
+}
+
+.footer
+{
+	background-color: RebeccaPurple;
+	width: 900px;
+	height: 100px;
+	
+	
+}
+
+
+
+
+
+
+
+
