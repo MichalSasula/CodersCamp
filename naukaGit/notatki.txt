@@ -59,10 +59,56 @@ git push --set-upstream origin master (to samo co linijka wyżej)
 git fetch  (pobranie zmian ze zdalnego repozytorium)
 
 git clone adres_repozytorium na githubie
+git clone --mirror nazwa_konta_przez_ktore_uzyskujesz_dostep@adres_projektu.git.com nazwa_folderu (klon forka nad którym będziesz pracował)
+
+git branch -D (usunięcie brancha)
+
+git remote add alias_repozytorium(zwykle origin) adres_repozytorium (dodanie remote repozytorium)
+
+git remote add just creates an entry in your git config that specifies a name for a particular URL. You must have an existing git repo to use this.
+
+git clone creates a new git repository by copying an existing one located at the URI you specify.
+
+git remote (wyświetla listę remote repositories)
+
+fit fetch alias_repozytorium (gains chenges from choosen remote repository)
+
+Różnica między git fetch a git pull:
+In the simplest terms, git pull does a git fetch followed by a git merge.
+
+git push -u repo_allias branch (u can use push -u to tell on wchich branch in remote repository you want to push changes)d
+
+git merge branch_name (merge the branch to the actual used branch) 
+przy rozwiązywaniu kofnliktu with one deleted file in one repository and the same file modified in another:
+1) git add file_name 
+2) git rm file_name 
 
 
+git checkout -b branch_name1 branch_name2 (create new branch1 and switch to it from branch2)
 
+git pull https://github.com/Sasul43/git-conflict.git feature (download the feature branch from fork repository)
+
+git merge --no-ff Sasul43-feature (flaga --no-ff definiuje sposób połączenia zmian w tym przypadku tworzony jest nowy commit, w normalnym przypadku tego commita nie ma)
+
+tryb fast forward -- nie jest tworzony żaden dodatkowy commit przy merge 
+
+?? Co to jest to rebase?
+
+git rebase master (zespala commity w jedną gałąź)??
+jak wystąpią konflikty to po ich poprawieniu:
+git rebase --continue
+
+git rebase master -i (uruchomienie w trybie interaktywnym)
+
+Tworzenie tagów:
+git tag nazwa_wersji
+git show nazwa_tagu (wyświetla informacje na temat commitu, na który wskazuje tag)
+git tag -d nazwa_tagu (delete chosen tag)
  
+git tag kodSHA(hasz)commitu -a -m (tworzenie tagu z podaniem autora i komentarza opisującego zawartość tagu)
+git push --tags (aby tagi pojawiły się w repozytorium zdalnym na githubie)
+
+git push -d nazwa_tagu (żeby usunąć tag ze zdalnego repozytorium)
 
 
 
