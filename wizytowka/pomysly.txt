@@ -1,2 +1,4 @@
 ﻿zrobić prosty slider
 wykorzystać before i after
+napisac prosty skrypt ktory zamienia litery naglowka na wielkie
+w jednym z rogow ekranu zamiescic zegarek
