@@ -5,3 +5,62 @@ Przeczytać książkę czysty kod
 Nauczyć się Wordpressa
 czym jest konto hostingowe?
 ogarnąć ajaxa? drzewko umiejętności ze strony Zelenta
+przerobic github websites jak zrobic strone internetowa na githubie
+
+na wszelki wypadek nauczyc sie priorytetow dzialan w java scripcie bo moze byc takie pytanie
+przeczytac o parametrze rest w kompletnym kursie javy 
+
+Czym są eventy, oraz IFE?
+Przeczytać te dwa artykuły:
+https://kursjs.pl/kurs/obiekty/obiekty-zaawansowane-this.php#funkcja-strzalkowa
+https://kursjs.pl/kurs/es6/funkcja-strzalkowa.php
+
+przerobić tutorial do gitkrakena
+przerobić ćwiczenia do gita ze stronki
+przerobić podstawowy kurs gita samuraja programowania
+przerobić materiały dodatkowe z java scripta
+https://kursjs.pl/kurs/events/events.php
+
+co robi funkcja tablica.reduce() ?
+
+Ogarnąć co to znaczy?
+function removeSmallest(numbers) {
+  const min = Math.min.apply(this, numbers);
+  return numbers.filter((num, idx, arr) => idx !== arr.indexOf(min));
+}
+
+i co oznaczają ... w kodzie? wykorzystane do jednego kata na kodewars
+
+co robi funkcja call na tablicach??
+
+tablica.includes() //czy tablica zawiera dany obiekt?
+
+Zwrócić uwagę, że w materiałach dodatkowych jedna stronka jest nieaktywna oraz, że codewars 
+kata o nazwie reduce nie wymaga użycia tej metody a metydy filter.
+
+gdy próbujemy uzyskać dostęp do nieistniejącego atrybutu obiektu to dostaniemy undefined;
+
+czy własność obiektu to to samo co atrybut?
+
+CodeCademy obiekty lekcja 8/10 to jest jakiś bezsensowny bełkot mógłby mi to ktoś wyjaśnić?
+
+
+🔗 Inline evaluation plugin  - sprawdzić co to jest
+https://quokkajs.com/
+
+
+java script promises koniecznie przerobić po przerobieniu asynchroniczności
+java script functors
+
+spróbować wykorzystać funktory w programie
+
+po promises i programowaniu asynhronicznym przydałoby się dowiedzieć co to są generatory
+
+
+Zrobić certyfikaty:
+(EGZAMIN 70-480)
+ MCSD: Web Applications oraz Microsoft Specialist Certification.
+założyć konto na stronie Prometric, które umożliwi nam przede wszystkim zapisywanie się na egzaminy, zmianę terminów, czy podgląd listy osiągnięć. 
+
+
+

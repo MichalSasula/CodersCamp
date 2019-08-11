@@ -1,0 +1,292 @@
+﻿display: grid;
+display: inline-grid;
+grid-template-columns: 100px 200px; // 20% 50%
+grid-template-rows: ...
+grid-template: row_size row_size ... / column_size column_size ...
+grid-template-columns: repeat(2, 20px 50px) //funkcja repeat
+
+//minmax function example
+.grid {		//nie może być ustalonej szerokości
+  display: grid;
+  grid-template-columns: 100px minmax(100px, 500px) 100px;
+}
+
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+
+It is important to note that grid-gap does not add space at the beginning or end of the grid.
+
+grid-gap: 20px 10px; //distance between rows 20px, columns 10px, jeżeli tylko jedna wartość podana to zostosuje do 			wierszy i kolumn
+
+
+
+.item {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+It is possible for the value of grid-row-start to be greater than that of grid-row-end. Both properties can also each have negative values. 
+
+.item {
+  grid-row: 4 / 6;
+}
+
+//span entitiy
+.item {
+  grid-column: 4 / span 2;
+}
+
+
+//ustawianie pola wiersze/kolumny dla obiektu w gridzie
+.item {
+  grid-area: 2 / 3 / 4 / span 5;  // grid row start / grid column start /grid row end / grid column end
+}
+
+
+// nazywanie grid-area w obrębie pojemnika typu grid
+.container {
+  display: grid;
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  grid-template-areas: "head head"
+                       "nav nav" 
+                       "info services"
+                       "footer footer";
+  grid-template-rows: 300px 120px 800px 120px;
+  grid-template-columns: 1fr 3fr; 
+}
+
+header {
+  grid-area: head;
+} 
+
+
+There are two axes in a grid layout — the column (or block) axis and the row (or inline) axis. 
+The column axis stretches from top to bottom across the web page.
+
+The row axis stretches from left to right across the web page. 
+
+justify-items is a property that positions grid items along the inline, or row, axis. This means that it positions items from left to right across the web page.
+
+By setting the justify-items property to center, the .card <div>s will be centered inside of their columns. They will only be as wide as necessary to contain their content (the words Card 1, etc). 
+
+We can use justify-content to position the entire grid along the row axis.
+
+It accepts these values:
+
+    start — aligns the grid to the left side of the grid container
+    end — aligns the grid to the right side of the grid container
+    center — centers the grid horizontally in the grid container
+    stretch — stretches the grid items to increase the size of the grid to expand horizontally across the container
+    space-around — includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element
+    space-between — includes an equal amount of space between grid items and no space at either end
+    space-evenly — places an even amount of space between grid items and at either end
+
+
+align-items is a property that positions grid items along the block, or column axis. This means that it positions items from top to bottom.
+
+align-items accepts these values:
+
+    start — aligns grid items to the top side of the grid area
+    end — aligns grid items to the bottom side of the grid area
+    center — aligns grid items to the center of the grid area
+    stretch — stretches all items to fill the grid area
+
+
+align-items is a property that positions grid items along the block, or column axis. This means that it positions items from top to bottom.
+
+align-items accepts these values:
+
+    start — aligns grid items to the top side of the grid area
+    end — aligns grid items to the bottom side of the grid area
+    center — aligns grid items to the center of the grid area
+    stretch — stretches all items to fill the grid area
+
+
+align-content positions the rows along the column axis, or from top to bottom.
+
+It accepts these positional values:
+
+    start — aligns the grid to the top of the grid container
+    end — aligns the grid to the bottom of the grid container
+    center — centers the grid vertically in the grid container
+    stretch — stretches the grid items to increase the size of the grid to expand vertically across the container
+    space-around — includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element
+    space-between — includes an equal amount of space between grid items and no space at either end
+    space-evenly — places an even amount of space between grid items and at either end
+
+
+justify-self specifies how an individual element should position itself with respect to the row axis. This property will override justify-items for any item on which it is declared.
+
+align-self specifies how an individual element should position itself with respect to the column axis. This property will override align-items for any item on which it is declared.
+
+They both accept these four properties: 
+
+    start — positions grid items on the left side/top of the grid area
+    end — positions grid items on the right side/bottom of the grid area
+    center — positions grid items on the center of the grid area
+    stretch — positions grid items to fill the grid area (default)
+
+Something called the implicit grid takes over. The implicit grid is an algorithm built into the specification for CSS Grid that determines default behavior for the placement of elements when there are more than fit into the grid specified by the CSS. 
+
+The default behavior of the implicit grid is as follows: items fill up rows first, adding new rows as necessary. New grid rows will only be tall enough to contain the content within them. In the next exercise, you’ll learn how to change this default behavior. 
+
+
+grid-auto-rows specifies the height of implicitly added grid rows. grid-auto-columns specifies the width of implicitly added grid columns.
+
+grid-auto-rows and grid-auto-columns accept the same values as their explicit counterparts, grid-template-rows and grid-template-columns:
+
+    pixels (px)
+    percentages (%)
+    fractions (fr)
+    the repeat() function
+
+grid-auto-flow specifies whether new elements should be added to rows or columns.
+
+grid-auto-flow accepts these values:
+
+    row — specifies the new elements should fill rows from left to right and create new rows when there are too many elements (default)
+    column — specifies the new elements should fill columns from top to bottom and create new columns when there are too many elements
+    dense — this keyword invokes an algorithm that attempts to fill holes earlier in the grid layout if smaller elements are added
+
+You can pair row and column with dense, like this: grid-auto-flow: row dense;.
+
+This property is declared on grid containers. 
+You can pair row and column with dense, like this: grid-auto-flow: row dense;. 
+
+
+Przydatny tag max-width: 100% (szczególnie do wstawiania obrazów)!!
+
+przydatny tag:
+display: none;
+
+!!Which of the following display values will set an element to be a grid container and inline?
+odp. inline-grid
+
+
+
+grid-template-columns: repeat(auto-fit, minmax(400px,1fr)); !! super przydatne pozwala uzyskać wraping bez podawania ilosci kolumn. alternatywnie można dać auto-fill
+
+auto-fill FILLS the row with as many columns as it can fit
+
+auto-fit FITS the CURRENTLY AVAILABLE columns into the space by expanding them so that they take up any available space. The browser does that after FILLING that extra space with extra columns (as with auto-fill ) and then collapsing the empty ones.
+
+box-shadow;
+
+overflow: hidden //!!przydatna funkcja do wstawiania obrazków ??
+
+//do wstawiania obrazkow (w obiekcie o display: grid)??:
+object-fit: cover
+object-fit: contain //zawiera caly obrazek bez skazonej skali
+
+grid-template-rows: auto 1fr 1fr auto; // ??co robi auto?
+
+!! argumenty do  grid-template-rows:
+auto	The size of the rows is determined by the size of the container, and on the size of the content of the items in the row	
+max-content	Sets the size of each row to depend on the largest item in the row
+
+
+
+height: 100vh; // 100% viewport height;
+
+//fajna opcja do zaokraglania przyciskow:
+border-radius: 5px;
+
+
+//!!przydatna funkcja:
+width: calc(100% - 6px);//!! maja byc odstepy miedzy znakiem minus inaczej bedzie blad
+
+background: white url(images/taco.jpg) // obrazek jako tło kontenera
+
+background-size: cover;
+
+//!!Jak wyśrodkować tekst w divie nie używając flexa:
+
+vertical-align: middle;
+
+//Jak usunąć kropki z listy:
+list-style: none;
+
+Jak zrobić, żeby linki nie były podrkeślone:
+text-decoration: none;
+
+
+text-transform: uppercase;//tekst wielkimi literami
+
+buttons?? aria-controls ?? aria-expanded ??
+
+//przykład gradientu:
+background: linear-gradient(to left, yellow, transparent)
+
+jak chcemy przenieść obiekt w grid po pomniejszeniu to możemy zrobić:
+@media (max-width: 1000px){
+  .menu{
+    order: -1;
+  }
+}
+
+!! inline/inline-block/block różnice !!
+
+Inline elements:
+
+respect left & right margins and padding, but not top & bottom
+cannot have a width and height set
+allow other elements to sit to their left and right.
+see very important side notes on this here.
+Block elements:
+
+respect all of those
+force a line break after the block element
+acquires full-width if width not defined
+
+
+Inline-block elements:
+
+allow other elements to sit to their left and right
+respect top & bottom margins and padding
+respect height and width
+
+
+object-fit can be set with one of these five values:
+
+fill: this is the default value which stretches the image to fit the content box, regardless of its aspect-ratio.
+contain: increases or decreases the size of the image to fill the box whilst preserving its aspect-ratio.
+cover: the image will fill the height and width of its box, once again maintaining its aspect ratio but often cropping the image in the process.
+none: image will ignore the height and width of the parent and retain its original size.
+scale-down: the image will compare the difference between none and contain in order to find the smallest concrete object size.
+
+
+//jak wprowadzić puste odstępy w paragrafie!!
+&nbsp;
+
+
+<form action='nazwa pliku php ktory obsluzy formularz' method="get/post"> 
+
+//przerwy miedzy wyrazami:
+h1 {
+  word-spacing: 0.3em;
+}
+
+h1 {
+  letter-spacing: 0.3em;
+}
+
+
+background-position!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

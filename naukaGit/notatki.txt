@@ -108,7 +108,7 @@ git tag -d nazwa_tagu (delete chosen tag)
 git tag kodSHA(hasz)commitu -a -m (tworzenie tagu z podaniem autora i komentarza opisującego zawartość tagu)
 git push --tags (aby tagi pojawiły się w repozytorium zdalnym na githubie)
 
-git push -d nazwa_tagu (żeby usunąć tag ze zdalnego repozytorium)
+git push origin -d nazwa_tagu (żeby usunąć tag ze zdalnego repozytorium)
 
 
 

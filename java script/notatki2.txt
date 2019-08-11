@@ -1,0 +1,663 @@
+﻿ECMAScript - organizacja określa standard dla języka java script
+
+console.log(tresc)
+
+7 typów danych:
+-number
+-string
+-boolean
+-null
+-undefined
+-symbol ?? (typy prymitywne)
+------------------
+-object (typy referencyjne)
+-*Array
+-*Regexp
+
+
+Wpisać w stronę inernetową about:blank otwiera pustą stronę później kliknąć f12
+var nazwa_zmiennej = wartość; (- definiowanie zmiennej)
+zmienna:
+1. nazwa (identyfikator)
+2. Miejsce w pamięci
+3. Wartość
+
+Można zadeklarować i zainicjalizować zmienną na poczatku, a można tylko ją zadeklarować (wtedy będzie undefined).
+
+let i const trzeba używać do tworzenia zmiennych.
+
+
+<body onload="nazwa_funkcji()";></body> -wywołanie funkcji przy załadowaniu strony
+<script type="text/javascript" src="nazwa_skryptu.js"></script>
+
+zmienna var ma zakres funkcyjny
+let ma zasięg blokowy
+
+var umożliwia hoisting zmiennej (mechanizm polegający na automatycznym przenoszeniu wszystkich deklaracji na sam początek danego zasięgu)
+
+let nie umozliwia hoistingu zmiennej (nie można się odwołać do zmiennej przed jej deklaracją)
+var może być znowu deklarowana np:
+var btc = 400;
+var btc = 500;
+zmienna let nie może być.
+
+const ma zasięg blokowy, jest stala i nie mozna redeklarowac zmiennej
+nie mozna tylko deklarowac zmiennej np. const nazwa_zmiennej; (bo pozniej nie mozemy tego zmienic)
+
+TypeScript - nakladka na java script tak aby dzialala jak jezyk silnie typowany
+
+Number(str) (konwertuje string zlozony tylko z liczb na number)
+parseInt(str, sytem_liczbowy) (konwertuje na int w danym systemie liczbowym najczesciej podaje sie 10)
+parseFloat(str) konwertuje na float
+? co to jest zmienna typu symbol?
+
+
+!! inicjalizowanie obiektów w tablicy!!
+const [last, first] = [12, 'a']
+standard zapisu liczb zmiennoprzecinkowych IEEE 754
+wstawianie pod zmienną elementu ze strony.
+<script>
+var zmienna = document.querySelector('.btn')
+?? btn.classList.add()
+?? btn.setAttribute()
+</script>
+
+Można deklarowac kilka zmiennych na raz: 
+var a; b;
+
+temporal dead zone (miejsce przed deklaracją zmiennej)
+
+=== (equal value and the same data type)
+
+NaN === Nan (zwraca false)
+
+
+Boolean(NaN) = false i to samo dla 0; i undefined; "", null, document.all ??
+zamiast funkcji Boolean można korzystać z dwóch !!
+
+short-circuit evaluation example:
+let defaultName = username || 'Stranger';
+
+ternary operator:
+(warunek)? a:b 
+
+4 sposoby tworzenia funkcji!!
+1) wyrazenie funkcyjne const funkcja = function(arg1,arg2){...; return ...} (to rozwiazanie nie daje hoistingu)
+2) deklaracja funkcji  function funkcja(arg1, arg2){...; return ... } (to rozwiazanie daje hoisting ale nazwa funkcji moze byc nadpisywana np. przez zmienna var o tej samej nazwie)
+3) konstruktor funkcji    const funkcja = new Function('arg1','arg2','console.log(a,b)')
+4) za pomoca operatora fat arrow const funkcja = (arg1,arg2) => {...; return ...}
+	czasami nie trzeba dawac klamry const funkcja = (arg1,arg2) => arg1*arg2 (nie trzeba dawac klamry i retrun jak jest tylko jedna operacja w ciele funkcji
+	jak jest tylko jeden argument funkcji to nie trzeba dawac nawiasu przy argumentach
+	const funkcja = arg1 => 3*a;
+
+funkcja jest pełnoprawnym obiektem.
+callback - funkcja wywołania zwrotnego
+higher-order function / higher-level function
+helper function - function inside other function (it is not a function parameter)
+
+Three methods of function creating:
+1) function declaration
+2) function expression
+3) concise body arrow functions
+
+
+ECMAScript, shortened to ES
+ES2015 = ES6
+
+num.toString();
+nazwa_stringu.substring(poczatek,dlugosc_substringu)
+Math.ceil(liczba)
+nazwa_stringu.slice(poczatek, koniec) // mozna dawac liczby ulamkowe?
+nazwa_stringu.toLowerCase()
+parseInt(str, sytem_liczbowy)
+
+
+
+
+
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  return enteredCode === correctCode && Date.parse(expirationDate) >= Date.parse(currentDate)
+}
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  return enteredCode===correctCode && new Date(currentDate) <= new Date(expirationDate);
+}
+
+arguments  (obiekt podobny do tablicy)
+zamiast parametru arguments lepiej jest teraz uzywac parametru rest.
+
+const tab = [];
+if (tab + "") { //"" + "" === "" czyli zwraca false
+
+usuwanie elementow z tablicy: delete tablica[3]
+
+tablica instanceof Array
+
+metoda macierz.shift() działa tak samo jak metoda macierz.pop() tylko, że dla pierwszego elementu macierzy
+tablica.push() dodanie elementów do tablicy, zwraca nową długość tablicy.
+tablica.unshift('nowy element') dziala jak push tylko na początek macierzy.
+
+tablica.concat(inna_tablica) (połączenie dwóch tablic)
+
+zamiana tablicy na string z ustaleniem separatora:
+tablica.join(separator)
+
+zamiast kropki można używać nawiasów kwadratowych!
+tablica["pop"]()
+
+MDN mozilla documentation network warto zobaczyć
+
+tablica.shift() (usuwa pierwszy element listy i zwraca go jako wartośc funkcji)
+tablica.unshift() dodaje element na początek listy
+
+tablica.push('el1','el2',...) dodaje elementy na koniec listy zwraca dlugosc listy
+
+
+tablica.slice(poczatek, koniec) wydziela fragment tablicy nie modyfikuje macierzy podstawowej
+tablica.indexOf(element_tablicy)
+
+for (initializer/starter; condition; incrementor/decrementor/iteration statement){
+
+}
+
+Pętle po tablicach:
+for(var i=0; i<tablica.length; i++){...}
+
+Pętle po obiektach:
+for (var elem in obj){console.log(elem, data[elem])} (elem drukowane są jako str)(do wartości atrybutu odwołuję się przez object['nazwa_atrybutu']
+
+tablica.sort()
+
+Czasami w Internecie spotkasz zapis pętli bez użycia słowa kluczowego var/let:
+for (i=0; i<10; i++) {...}
+Zadziałać zadziała, ale nie jest to zalecane. Gdy nie używamy słowa kluczowego (var / let) działym na zmiennej globalnej, co może powodować błędy:
+
+
+pętla for of
+for (const el of tab){
+}
+
+When for of and when for if?
+Use for…of to iterate over the values in an iterable, like an array, string, maps, sets, generators, DOM node collections, arguments object
+
+
+pętla for in use for in to iterate over the properties of an object(object keys):
+
+let oldCar = {
+  make: 'Toyota',
+  model: 'Tercel',
+  year: '1996'
+};
+
+for (let key in oldCar) {
+  console.log(`${key} --> ${oldCar[key]}`);
+}
+
+
+konstruktor Array:
+const tab = new Array(10, "ala", "ala", "ala") // pierwse trzy to ale reszta undefined
+?? u mnie powstaje normalnie tablica [10, 'ala','ala','ala']??
+
+metoda unshift //mozna podac kilka argumentów do wstawienia na początku tablicy
+
+tablica.join(separator)
+tablica.reverse() //odwraca kolejność elementów w tablicy, metoda mutująca
+tablica.sort(funkcja sortująca) // metoda mutująca
+
+Pisząc taką funkcję musimy pamiętać o 3 warunkach:
+
+Jeżeli funkcja(a, b) zwróci wartość mniejszą od 0, to wartość a będzie miała mniejszy index od b
+Jeżeli funkcja(a, b) zwróci 0, to indexy wartości a i b pozostaną bez zmian
+Jeżeli funkcja(a, b) zwróci wartość większą od 0, to wartość a będzie miała większy index od b
+
+
+!!Sortowanie po stringach ?? Dlaczego nie można dać zwykłego sort bez argumentu??
+tablica.sorit((a,b)=>{a.localeCompare(b)})
+
+wycinek tablicy od pewnego momentu:
+tablica.substr(nr_indexu_elementu)
+
+
+dodawanie tablic daje w rezultacie string!! nie można dodawać tablic.
+
+metoda concat()
+tab1.concat(tab2, tab3, tab4) daje w rezultacie macierz
+
+Lepiej używać operatora spread:
+
+const anim1 = ["Pies", "Kot"];
+const anim2 = ["Słoń", "Wieloryb"];
+const table = [...anim1, ...anim2];
+console.log(table)
+
+
+
+tablica.slice(od, do)
+tablica.slice(2) //Dwa pierwsze elementy
+tablica.slice(-2) //Dwa ostatnie elementy
+tablica.slice(2,-1) od trzeciego do przedostatniego elementu!!
+
+!! metoda splice //usuwanie dodawanie nowych elementów
+tablica.splice(index, ileUsunac, noweElementy*...)
+
+const tab = ['Marcin', 'Ania', 'Agnieszka'];
+
+tab.splice(1, 1); //od indexu 1 usuwam 1 element
+console.log(tab); //wypisze "Marcin, Agnieszka"
+
+tab.splice(1, 0, 'Monika', 'Magda') //nic nie usuwam i wstawiam nowe elementy przed index 1
+console.log(tab); //wypisze "Marcin, Monika, Magda, Agnieszka"
+
+//usuwanie trzeciego elementu za pomocą metody splice!!
+
+const tab = ['Marcin', 'Ania', 'Agnieszka', 'Monika'];
+const delEl = tab.splice(2, 1);
+console.log(tab); //wypisze 'Marcin', 'Ania', 'Monika'
+console.log(delEl); //wypisze 'Agnieszka'
+
+?? metoda splice zwraca jako wartośc usuwane elmenty
+
+//dodawwanie elementu metodą splice:
+tab.splice(1, 0, 'Piotr');
+
+
+Metoda fill()
+
+console.fill(pocz, koniec)
+
+funkcje forEach i map pomiajają puste miejsce daltego musimy ją wypełnić!! można użyć fill (czy to jest jeszcze aktualne??)
+
+console.flat(poziom_splaszczenia)
+console.flat(Infinity)
+
+Higher-order functions are functions that accept other functions as arguments and/or return functions as output. 
+
+... spread operator lepiej go  używać zamiast funkcji tablica.concat()
+Spread syntax, to nowy zapis, który umożliwia rozbijanie iterowanej (takiej po której można robić pętle) wartości na składowe.
+
+Przyklady:
+const Math.max(...tab);
+Math.max.call(Math, tab); //to samo co powyższe
+
+//rozbijanie tablicy na poszczególne liczby
+const tab = [1,2,3,4];
+console.log(...tab);
+
+//kopiowanie tablic!!
+const tab2 = [...tab]; //kopia tablicy tab
+tab2 = tab.slice(); //starsza metoda
+
+//łączenie tablic
+const tabPart = [3, 4]
+const tabFull = [1, 2, ...tabPart, 5, 6]; //1,2,3,4,5,6
+
+rest parameter:
+Zapis ten umożliwia zbieranie w jedną zmienną (będącą tablicą) wielu parametrów przekazywanych do funkcji:
+function myF(...param) {
+    console.log(param); //[1, 2, 3, 4, 5]
+}
+
+arguments/param różnice:
+- właściwość arguments ma narzuconą nazwę, a rest możemy nazywać tak jak nam pasuje.
+- do rest parameters trafiają parametry w formie tablicy.
+- Mimo, że po arguments możemy zrobić pętlę for, nie jest on tablicą (tak samo jak w przypadku kolekcji):
+myF(1,2,3,4,5);
+
+Zbieranie dodatkowych argumentów za pomocą param:
+function printAbout(name = "Ala", pet = "kot", ...other) {//something something}
+
+Pamiętaj, że rest musi występować jako ostatni w parametrach:!!
+
+
+Co ciekawe w przypadku atrybutów także istnieje temporal dead zone:
+
+Metoda call()
+
+The built-in JavaScript array methods that help us iterate are called iteration methods, at times referred to as iterators. Iterators are methods called on arrays to manipulate elements and return values.
+
+tablica.forEach(); nie zwraca wartości
+tablica.map(); (to samo co forEach tylko zwraca macierz)//nie mutuje tablicy wejściowej
+tablica.filter();// nie zmienia tablicy wejściowej
+tablica.findIndex(callback); zwraca index elementu spełniającego callbacka lub -1
+tablica.reduce(callback(accumulator, currentValue),initialValue);
+tablica.some()
+tablica.every
+
+!! zamiana stringa na macierz: napis.split(' ') //podac jakis separator
+console.join(' ') //laczy elementy tablicy za pomoca podanego separatora
+
+
+tablica.every(logical_callback)
+tablica.includes(argument)
+
+można dodawać atrybutu do obiektu nawet po jego utworzeniu (chyba trochę słabo, jak sie
+zabezpieczyć przed literówkami??)
+
+delete object.property usuwanie atrybutu
+
+definiowanie metody w obiekcie:
+1)
+const alienShip = {
+  invade () { 
+    console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+  }
+};
+
+const alienShip = {
+  invade: function () { 
+    console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+  }
+};
+
+Object.values(nazwa_obiektu) //zwraca wszystkie wartości jakiegoś obiektu wszystko jedno jakiego
+
+Object.keys(nazwa_obiektu) //zwraca atrybuty obiektug
+
+Certain languages have privacy built-in for objects, but JavaScript does not have this feature.
+
+In general, getter methods do not need to be called with a set of parentheses. 
+
+Another thing to keep in mind when using getter (and setter) methods is that properties cannot share the same name as the getter/setter function. If we do so, then calling the method will result in an infinite call stack error. 
+
+Setter methods like age do not need to be called with a set of parentheses.
+
+
+property value shorthand
+const monsterFactory = (name, age) => {
+  return { 
+    name,
+    age 
+  }
+};
+
+
+destructured assignment
+
+object.hasOwnProperty()
+object.valueOf()
+object.assign()
+object.entries()
+object.keys()
+
+
+Object.keys(object1)// bez sensu, skoro object1 jest obiektem to dlaczego nie może odziedziczyć metody z klasy Object?
+
+Object.entries() // zwraca macierz kluczy i wartosci
+
+?? Jaka jest różnica między factory functions, a konstruktorami??
+factory function na codecademy nie używają słowa new.
+konstruktory wywoływane są przy new?
+
+Book.prototype.getSummary() = function() {...} // funkcja getSummary jest jedną z własności obiektu książka ale znajduje się w zakładce __proto__
+
+Book.prototype.revise = function(newYear){...} // 
+
+The object that a method belongs to is called the calling object.
+
+W codecademy raz użyto $${zmienna} przy drukoaniu tekstu, czy to błąd, czy to robi coś innego?
+
+konstruktor nie może przyjąć postaci funkcji strzałkowej
+
+różnica między factory function a konstruktorem:
+1) przy konstruktorze można użyć później metody instance of żeby zobaczyc do jakiej klasy obiekt należy
+2) constructor function has to be invoked with new keyword
+
+
+In JavaScript,
+You can use new operator on ANY function
+You can call function intended as constructor WITH or WITHOUT the new keyword
+
+metody static też są dziedziczone.
+
+??Czy w klasach oprócz funkcji są jeszcze atrybuty statyczne?
+
+czy konstruktor może występować niezależnie poza ciałem klasy? albo bez definicji klasy
+
+co jak w klasie nie zdefiniowałem konstruktora a wywołuję new Nazwa_klasy ? (tak jak w przykładowym kata na codecademy)
+
+do obiektu można dodawać właściwości również poza jego ciałem!!
+
+this wskazuje na obiekt, który odpalił metodę !!
+
+usuwanie własności obiektu:
+delete car.color //zwróci undefined
+aby usunąc obiekt można jego zmienną przypisać do null
+
+można dać w metodzie return this i używać chaining method 
+
+Prototype system w js:
+function User (email, mail) {   //constructor function 
+	this.email = email;
+	this.name = name;
+	this.online = false;
+	this.login = function() {...};//ale raczej się tak nie zamieszcza w ciele constructor function tylko używa prototypów tzw. prototype property
+} 
+
+//prototype property example
+
+User.prototype.login = function(){...}
+
+
+every object has .prototype , każda instacja ma __prot__ wskazujące na .prototype
+
+//dziedziczenie prototypów
+function Admin(...args){ //rest parameter
+	User.apply(this, args) //lub call ponoć podobne
+	this.additional_property = 'super admin';	
+}
+
+
+//inny pryzkład dziedziczenia prototypów, dzidziczy z Book
+function Magazine(title, author, year, month)
+{
+	Book.call(this, title, author, year, month); // uruchomienie constructor 							function Book
+	this.month = month; //new propertyfg
+}
+
+
+Admin.prototype = Object.create(User.prototype);//dziedziczenie metod
+Admin.prototype.deleteUser = function() {...} //nowa właściwość tylko dla klasy potomnej
+
+
+'1' == 1 // -> true
+
+'' == false // -> true
+
+typeof NaN // -> “number”
+
+['10', '10', '10'].map(parseInt) // -> [10, NaN, 2]
+
+Powstały Prototype, jQuery, Mootools, Dojo, czyli biblioteki znacznie ułatwiające development.
+Pomogła też książka Douglasa Crockforda - „Javascript. Dobre strony”.
+
+Chcąc przyspieszyć działanie JS w przeglądarce Chrome, Google stworzyło silnik V8. Został opracowany jako komponent, który może być używany samodzielnie lub wbudowany w inny program.
+
+
+null + 3 === 3 || !(5-5) && "1" * 10 >= 10
+
+
+Priorytety operatorów:
+
+nawiasy
+negacja logiczna
+mnożenie
+dodawanie
+operator relacji >=
+operator porównania ===
+logiczne i &&
+alternatywa ||
+
+
+5 || 4 // zwraca 5
+
+false || 0 || "" || null  //zwraca null
+
+'aaa' && "" // zwraca " "
+null && NaN //zwraca NaN
+
+typeof null // zwraca object
+typeof undefined // zwraca undefined
+null + 5 // zwróci 5
+undefined + 5 //NaN poniważ undefined jest zamieniany na NaN
+funckja strzałkowa ()=> nie tworzy własnego this!! może to być przydatne
+	Jeżeli robimy funkcję, która pracuje na this to trzeba się zastanowić czy używać funkcji strzałkowej 
+
+
+tablica.reject() // to samo co filter tylko, że filtruje false
+import fs from 'fs' // sposób importowania bibliotek w js
+import _ from 'lodash'
+nazwa_stringu.trim() // ucina białe znaki na początku i końcu stringa
+
+console.log('output', JSON.stringify(output, null, 2)) // ładny zapis pliku tekstowego z wcięciami
+
+closures // funkcje są closures (mają dostęp do zmiennych spoza ciała funkcji)
+
+
+//currying example!!
+
+let dragon=
+	name=>
+		size=>
+			element=>
+				name+'is a'+size+'dragon that breaths' + element+'!'; 
+
+
+Wywołanie:
+dragon('Antonina')('tiny')('meat') //chaining functions
+
+jak zrobić kopię tablicy zamiast referencji!!
+1) const team2 = players.slice(); //dostajemy kopię tablicy players!! 
+2) const team2 = [].concat(players);
+3) const team2 = [...players] //spread operator
+4) const team2 = Array.from(players)  
+
+Jak zrobić kopię obiektu!!
+const copyObj =  Object.assign({}, nazwa_kopiowanego_obiektu, {property: property_value}); // można bez ostatniego argumentu wtedy czystą kopię zwraca bez modyfikacji atrybutu
+
+const copyObj = {...nazwa_kopiowanego_obiektu} // spread operator, ale to bardzo płytkie kopie!!
+
+tablica.every(logical_callback) zwraca true/false
+
+tablica.find //
+The find() method returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.
+
+Skrócony zapis ustawiania atrybutu obiektu:
+nazwa_obiektu {atrybut: 'wartosc'}
+
+
+jak da się typeof jakaś klasa to zwróci function!!
+
+Załączanie pliku js do html:
+<script src="js/script.js"></script>
+
+Java promises examples
+
+A promise is an object that may produce a single value some time in the future
+A promise may be in one of 3 possible states: fulfilled, rejected, or pending.
+
+functors are objects thatare implementing map method, i metoda map musi zwracać też funktor
+
+Reflection/Introspection operators, like typeof, instanceof, and delete.\
+
+
+__proto__ to właściwość, która wskazuje na prototyp, na którym opiera się dany obiekt.
+
+
+Jeżeli dane instancje obiektów są tylko pojedynczymi instancjami (nie zostały stworzone na bazie żadnego konstruktora typu Array, Data(), naszego konstruktora itp.), to ich __proto__ wskazuje na właśnie ten prototyp Object.
+
+Destructuring:
+
+	const {zmienna1, zmienna2, zmienna3} = obiekt //zczytuje pola z obiektu do zmiennych
+
+destruktyryzacja obiektu jako parametru funkcji:
+
+function makeSoound({var1=3, var2}) = {
+{ var1* var2}
+} // możemy podać obiekt jako argument
+
+Destruktyryzację obiektów można przeprowadzić na wielu warstwach zagnieżdżenia
+
+Sprawdzić Optional Chaining Operator in JavaScript
+
+Symbols can be used as Object keys
+
+
+In addition to that, Symbols do not show up on an Object using for in, for of or Object.getOwnPropertyNames - the only way to get the Symbols within an Object is Object.getOwnPropertySymbols: !!
+
+Czym są symbole?
+In reality, Symbols are just a slightly different way to attach properties to an Object
+Symbols can be used 2 fold:
+1) As a unique value where you’d probably normally use a String or Integer
+2)  A place to put metadata values in an Object
+
+Klasy abstrakcyjne !!
+
+class Animal {
+    constructor(name) {
+        if (this.constructor === Animal) {
+            throw new Error("Nie możesz tworzyć obiektów z klasy abstrakcyjnej!");
+        }
+        this.type = "animal";
+        this.name = name;
+    }
+    eat() {
+        return "I eat food";
+    }
+}
+
+
+//lub
+class Animal {
+    constructor(name) {
+        if (new.target === Animal) {
+            throw new Error("Nie możesz tworzyć obiektów z klasy abstrakcyjnej!");
+        }
+        this.type = "animal";
+        this.name = name;
+    }
+    eat() {
+        return "I eat food";
+    }
+}
+
+!! funkcje statyczne przed ES6:
+//w ES5
+function Human {
+    this.name = name;
+}
+Human.prototype.say = function() {
+    console.log("Jestem człowiek");
+}
+Human.create = function() {
+   console.log("Jem śniadanie");
+}
+
+const ob = new Human("Marcin");
+ob.create(); //błąd - to klasa Human ma dostęp do create(), nie instancja ob
+Human.create(); //ok
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
