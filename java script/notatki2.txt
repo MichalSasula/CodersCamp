@@ -638,14 +638,31 @@ ob.create(); //błąd - to klasa Human ma dostęp do create(), nie instancja ob
 Human.create(); //ok
 
 
+//Ważne przekazywanie prototypu:
+
+Object.setPrototypeOf(cat, animal);
+
+!! What new do:
+1) create a new object
+2) set the prototype
+3) execute constructor with this
+4) return the created object
 
 
+Object.create() // static method na object.prototype: creates a new object with the prototype set to a certain object!!!!!!!!!!!!!!
 
 
+nie tworzyć nowego obiektu, a później funkcji setPrototypeOf, 
+tylko od razu tworzyć obiekt i przypisywać mu prototyp za pomocą Object.create();
 
+Jak działa Object.create():
+1.) tworzy pusty obiekt
+2) set prototype of created object to certain object
 
-
-
+!! Dziedziczenie starym sposobem:
+Brick.call(this,argumenty_konstruktora) //1) wywołanie konstruktora na this klasy potomenej
+BrickGreen.prototype = Object.create(Brick.prototype) //2) ustawienie prototypu obiektów utworzonych w klasie 	potomnej na prototypy obiektów utworzonych w klasie rodzicielskiej
+BrickGreen.constructor = BrickGreen //3) Przywrócenie konstruktora z powrotem
 
 
 
