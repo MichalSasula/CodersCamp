@@ -1,0 +1,153 @@
+﻿SoC - separation of concerns
+defer atribute
+<script src="script2.js"></script>
+async atribute
+<script src="example.js" async></script>
+DOM - document object model, wirtualna reprezentacja kodu html?
+
+The Document Object Model, abbreviated DOM, is a powerful tree-like structure that allows programmers to conceptualize hierarchy and access the elements on a web page.
+
+There are nine different types of node objects in the DOM tree.
+
+Elements are the building units of HTML web pages, they contain everything between an opening tag and a closing tag. If the tag is a self-closing tag, then that is the element itself.
+
+.innerHTML
+
+The .querySelector() method allows us to specify a CSS selector and then returns the first element that matches that selector. 
+document.querySelector('p');
+
+Get element by id
+document.getElementById('bio').innerHTML = 'The description';
+
+Changing style with DOM:
+document.querySelector('.blue').style.fontFamily = 'Roboto';
+
+
+
+.createElement(tagName)
+let paragraph = document.createElement('p');
+paragraph.innerHTML = 'The text inside paragraph';
+document.body.appendChild(paragraph);
+
+
+variable.id
+
+
+
+.removeChild() method removes a specified child from a parent.
+
+
+różnice między hidden, display:none, ?? 
+
+.removeChild() method removes a specified child from a parent.
+
+.onclick property allows you to assign a function to run on a click event on an element:
+
+.firstChild property will grant access to the first child of that parent element.
+
+Each DOM element node has a .parentNode and .children property.
+
+CSS property:
+cursor: pointer;
+
+
+event target - obiekt z DOM, na którym będzie wywoływany event
+event handler property - np. eventTarget.onclick
+event handler function to funkcja którą przypisujemy do eventTarget.onclick = eventFunction
+
+!!It’s best practice to create named event handler functions, instead of anonymous functions.
+
+addEventListener
+eventTarget.addEventListener('click', eventHandlerFunction);
+You’ll want to use the .addEventListener() method to allow multiple event handlers to be registered to a single event without changing its other event handlers.
+
+The .removeEventListener() method is used reverse the .addEventListener() method.
+eventTarget.removeEventListener('click', eventHandlerFunction);
+
+event.target
+event.type
+event.timeStamp
+
+!!
+JavaScript engines register events as objects with properties and methods associated with them.
+Event handlers are registered as properties of their event object.
+Event object properties like .target, .type, and .timeStamp are used to provide information about the event.
+The .addEventListener() method can be used to add multiple event handler functions to a single event.
+The .removeEventListener() method stops specific event handlers from “listening” for specific events firing.
+
+
+!!
+Setting a style property equal to an empty string '' in JavaScript will return the element to its original style.
+
+freesound - darmowy katalog dźwięków
+
+
+
+handlebars
+
+Inside a script, Handlebar expressions are wrapped with double braces, {{ }}
+
+<script id="foo" type="text/x-handlebars-template">
+  <p>{{bar}}</p>
+</script>
+
+const source = document.getElementById('foo').innerHTML;
+
+const template = Handlebars.compile(source); //template is a function that when passed an object returns a completed/compiled template in a string.
+
+const context = {
+  bar: 'Text of the paragraph element'
+};
+
+const compiledHtml = template(context);
+
+
+?? dlaczego type = x-handlebars-template // co robi ten x?
+
+Handlebars:
+{{#if}}
+	{{#each}}
+
+Promises are objects that represent the eventual outcome of an asynchronous operation. A Promise object can be in one of three states:
+
+Pending: The initial state— the operation has not completed yet.
+Fulfilled: The operation has completed successfully and the promise now has a resolved value. For example, a request’s promise might resolve with a JSON object as its value.
+Rejected: The operation has failed and the promise has a reason for the failure. This reason is usually an Error of some kind
+
+The Node setTimeout() Function
+
+.then() zawszse zwraca promise
+
+Remember, .then() will return a promise with the same settled value as the promise it was called on if no appropriate handler was provided.
+
+different promise function: .catch().
+
+.catch() accomplishes the same thing as using a .then() with only a failure handler.
+
+process of chaining promises together is called composition. 
+
+
+Promise.all() accepts an array of promises as its argument and returns a single promise. That single promise will settle in one of two ways:
+
+If every promise in the argument array resolves, the single promise returned from Promise.all() will resolve with an array containing the resolve value from each promise in the argument array.
+If any promise from the argument array rejects, the single promise returned from Promise.all() will immediately reject with the reason that promise rejected. This behavior is sometimes referred to as failing fast.
+
+Promises info:
+Promises are JavaScript objects that represent the eventual result of an asynchronous operation.
+Promises can be in one of three states: pending, resolved, or rejected.
+A promise is settled if it is either resolved or rejected.
+We construct a promise by using the new keyword and passing an executor function to the Promise constructor method.
+setTimeout() is a Node function which delays the execution of a callback function using the event-loop.
+We use .then() with a success handler callback containing the logic for what should happen if a promise resolves.
+We use .catch() with a failure handler callback containing the logic for what should happen if a promise rejects.
+Promise composition enables us to write complex, asynchronous code that’s still readable. We do this by chaining multiple .then()‘s and .catch()‘s.
+To use promise composition correctly, we have to remember to return promises constructed within a .then().
+We should chain multiple promises rather than nesting them.
+To take advantage of concurrency, we can use Promise.all().
+
+
+
+async functions always return a promise.
+
+
+The await keyword can only be used inside an async function
