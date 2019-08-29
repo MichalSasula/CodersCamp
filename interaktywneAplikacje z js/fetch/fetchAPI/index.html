@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- <script defer>
+
+            const btn = document.getElementById('btn1');
+            console.log(btn);
+            btn.addEventListenner('click',
+            
+                fetch('https://jsonplaceholder.typicode.com/users')
+                .then(resp =>{
+                    console.log("Przykład 1:");
+                    console.log(resp);
+                })
+            )
+        </script> -->
+</head>
+<body>
+    <button id="btn1">Kliknij mnie!</button>
+    <br>
+    <br>
+    <button id="btn2">Dodaj użytkownika do bazy!</button>
+    <br>
+    <br>
+    <button id="btn3">Dodaj w formacie JSON!</button>
+</body>
+
+    <script>
+
+        {
+            const btn = document.querySelector("#btn1");
+            const btn2 = document.querySelector('#btn2');
+            const btn3 = document.querySelector('#btn3');
+
+            btn.addEventListener("click", function() {
+                fetch("https://jsonplaceholder.typicode.com/users")
+                    .then(resp => {
+                        console.log(resp.headers.get("Content-Type"));
+                        console.log(resp.headers.get("Date"));
+
+                        console.log(resp.status);
+                        console.log(resp.statusText);
+                        console.log(resp.type);
+                        console.log(resp.url);
+                        console.log(resp.body);
+                        return resp.json();
+                    })
+                    .then(resp =>{
+                        console.log('Przyklad 2');
+                        console.log(resp);
+                        resp.forEach(user=>{
+                            console.groupCollapsed(`Użytkownik ${user.id}`)
+                            console.log(`Nazwa: ${user.name}`)
+                            console.log(`Email: ${user.email}`)
+                            console.groupEnd();
+                        })
+                    })
+            })
+
+            btn2.addEventListener('click',()=>{
+                const formData = new FormData();
+                formData.append('name', 'Michał');
+                formData.append('surname', 'Sasuła');
+                fetch('https://jsonplaceholder.typicode.com/users',
+                {
+                    method: 'post',
+                    body: formData
+                })
+                .then(res => res.json())
+                .then(res => {
+                    console.log('Dodałem użytkownika:');
+                    console.log(res);
+                })
+                
+            })
+
+
+            btn3.addEventListener('click',()=>{
+                
+                const ob = {
+                    title: 'Nazwa posta',
+                    body: 'Lorem ipsum dolor sit amet consectetur',
+                    uerId: 1
+                }
+
+
+                const ourHeaders = new Headers();
+                ourHeaders.append('Content-Type', 'text/plain');
+                ourHeaders.append('X-My-Custom-Header', 'CustomValue');
+                ourHeaders.set("Content-Type", "application/json");
+                ourHeaders.append('charset','UTF-8');
+                ourHeaders.delete('X-My-Custom-Header')
+        
+                fetch('https://jsonplaceholder.typicode.com/users',
+                {
+                    method: 'post',
+                    headers: ourHeaders,
+                    body: JSON.stringify(ob)
+                })
+                .then(res => res.json())
+                .then(res => {
+                    console.log('Dodałem użytkownika:');
+                    console.log(res);
+                })
+                
+            })
+
+
+        }
+    </script>
+
+</html>
+

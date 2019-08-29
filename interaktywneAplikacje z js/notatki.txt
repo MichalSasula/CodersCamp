@@ -151,3 +151,151 @@ async functions always return a promise.
 
 
 The await keyword can only be used inside an async function
+
+
+
+!!Tworzenie własnego atrybutu // data-id=
+<div id="user" data-atrybut="1234567890" data-user="johndoe" data-date-of-birth>John Doe</div>
+
+I dostęp do niego:
+document.getElementById('user').dataset.atrybut
+
+!! Pamiętać o zdarzeniu DOMContentLoaded
+
+
+przydatne: e.preventDefault();
+
+bubling/capture/wywołanie zdarzenia jeden raz:
+element.addEventListener('click', doSomething, {
+    capture: false, //czy używać fazy capture
+    once: true, //po pierwszym odpaleniu nasłuchiwanie zostanie usunięte
+    passive: false //jeżeli true, funkcja nigdy nie odpali preventDefault() nawet jeżeli podano je w funkcji
+});
+
+przerwanie bomeblkowania:
+Aby przerwać powyższą wędrówkę, skorzystamy z metody e.stopPropagation().
+
+Istnieje też metoda stopImmediatePropagation(), która także blokuje wędrówkę eventu danego typu. Różni się ona od stopPropagation tym, że poza blokadą wędrówki dodatkowo zatrzyma dla danego elementu wywołanie kolejnych funkcji nasłuchujących dany event.
+
+!!Przydatne, sprawdza, czy dany obiekt ma rządaną klasę:
+e.target.className.contains('.delete')
+
+
+
+Możemy też odpalać inne typy eventów (ale i te powyższe). Aby odpalić takie eventy, musimy się posłużyć konstruktorem Event:
+const img = document.querySelector('img');
+
+const event = new Event("mousemove", {
+    'bubbles'    : true, //czy zdarzenie ma iść w górę dokumentu
+    'cancelable' : true  //czy można je zatrzymać
+});
+img.dispatchEvent(event);
+//lub w skróconej wersji
+img.dispatchEvent(new Event("mousemove"));
+
+
+
+Istnieje kilka metod, które możemy wykorzystać do symulowania zachowania elementów:
+
+element.click(); //kliknęliśmy w element
+element.select(); //zaznaczamy element (tekst w inpucie)
+element.focus(); //wybieramy element (jak za pomocą klawiatury)
+element.blur(); //opuszczamy element
+
+form.submit(); //wysyłamy formularz
+form.reset(); //resetujemy formularz
+
+Metoda: CustomEvent(eventName, detail, bubbles, cancelable).
+
+Właściwość e.cancelable mówi nam, czy można zatrzymać event za pomocą preventDevault() // gdy false to można przerwać
+
+
+callbacks/promisses/async funcitons crash curse:
+ 
+
+
+
+
+Jest coś takiego jak Promise.resolve('tekst') //chyba zwraca resolved promise
+
+API - aplication programing interface
+
+!!Przydatne regular expressions:
+new RegExp(coSzukasz, 'gi') // global, insesitive
+
+promise.race() zwraca pierwszego promisa, który się wykonał
+
+Promise.finally() // odpalana zawsze po zakończeniu promisa nieważne, czy pozytywnego czy nie:
+
+fetch('....')
+.then(res => res.json())
+.then(res => console.log(res))
+.catch(err => alert(err))
+.finally(() => {
+    btn.classList.remove("loading");
+    btn.disabled = false;
+});
+
+//fetch
+
+Wynika to z tego, że Promise zwracany przez Fetch nie zwraca reject gdy status połączenia jest niewłaściwy (404, 500 itp).
+
+W then można korzystać z takiego zapisu:
+return Promise.reject(resp)
+
+<input type='submit'> ma też opcję 
+
+Jak używać local storage na stronie:
+localStorage.setItem('dania', JSON.stringify(items));
+
+e.target.matches('input')) //przydatne wyrażenie
+
+suwak: <input type='range'>
+
+Document.documentElement returns the Element that is the root element of the document
+
+//Inny sposób zmieniania stylu elementów za pomocą DOM:
+elementZmieniany.style.setProperty(propertyName, value, priority);
+
+
+
+!! bezpieczeństwo kodu:
+"use strict"; Defines that JavaScript code should be executed in "strict mode".
+The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+With strict mode, you can not, for example, use undeclared variables.
+
+Jak sprawdzić, czy jedną z klas elementu jest szukana klasa:
+ev.target.className.indexOf('bar')!==-1
+
+
+!!może przydać się do szachów
+Return the size of an element and its position relative to the viewport:
+var rect = obj.getBoundingClientRect();
+
+
+
+//Czy można zmieniać rozmiar pola textarea?
+poleTextarea.style.resize = 'none';
+
+jak ustawić wysokość na 100%:
+canvas.widht = window.innerHeight;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
