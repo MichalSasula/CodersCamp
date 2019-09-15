@@ -1,0 +1,17 @@
+npm install //??
+npm init
+npm install webpack --save-dev //development only dependency
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+npm init
+npm add webpack --dev
+
+w pliku package.json:
+"scripts":{
+	"build": "webpack",
+}
+
+w konsoli:
+npm build

@@ -1,0 +1,1 @@
+webpackJsonp([0],{4:function(o,n){console.log("Contact World!")}},[4]);

@@ -1,0 +1,38 @@
+npm init
+npm add webpack --dev  // lub npm add webpack --only=dev
+
+npm install --save-dev webpack
+
+npm install --save-dev
+
+npm install --save-dev css-loader
+
+npm install --save-dev extract-text-webpack-plugin
+npm install extract-text-webpack-plugin@next
+
+npm install --save-dev style-loader
+
+npm install --save lodash
+
+npm run build -- -p  // stara wersja webpacka bundle jest zoptymalizowany
+
+npm install --save-dev html-webpack-plugin
+
+npm install -D style-loader
+
+npm install -D optimize-css-assets-webpack-plugin
+
+npm install -D purifycss-webpack
+npm install -D purify-css
+
+
+//%%%%%%%%%%%%%%%%%%%%%%
+
+npm install webpack webpack-cli --save-dev
+
+
+
+
+
+
+
